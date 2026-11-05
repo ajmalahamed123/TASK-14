@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            position:relative;
+            height:250px;
+            width: 620px;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 12px;
+        }
+        .box1{
+            position: relative;
+            /* margin: 5px; */
+            padding:20px 10px;
+            height: 231px;
+            width: 250px;
+            background-color: darkcyan;
+            color: white;
+            border-radius: 10px ;
+            text-align: center;
+        }
+        .operator{
+            display: flex;
+            position: absolute;
+            height: 105px;
+            width: 200px;
+            background-color: burlywood;
+            left:20px;
+            top:115px;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            gap:12px;
+            border-radius: 10px ;
+        }
+        .content{
+            position:absolute;
+            /* margin: 4px; */
+            padding:10px;
+            height: 231px;
+            width:340px;
+            background-color: rgb(194, 163, 122);
+            left:265px;
+            top:10px;
+            border-radius: 10px ;
+            text-align: center;
+            
+        }
+        .btn button{
+            /* position: relative; */
+            height: 35px;
+            width: 110px;
+            background-color: darkcyan;
+            color: white;
+            text-align: center;
+            justify-content: center;
+            /* padding-top: 5px; */
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            /* margin-left:120px; */
+        }
+        .btn button:hover {
+            background-color: #005f5f;
+            transform: scale(1.05);
+        }
+        .content input{
+            position: block;
+            height: 25px;
+            width: 200px;
+            margin: 5px auto;
+            padding: 5px 10px;
+            background-color: rgb(235, 238, 238);
+            font-size: 14px;
+            border-radius: 5px solid #aaa;
+        }
+        .output h4{
+            position: block;
+            height: 30px;
+            width: 200px;
+            margin: 5px auto;
+            padding: 5px 10px;
+            background-color: rgb(235, 238, 238);
+
+        }
+        /* .output{
+            position: absolute;
+            height: 30px;
+            width: 200px;
+            margin-left: 70px;
+            
+            background-color: rgb(235, 238, 238);
+        }
+        .output h2{
+            text-align: center;
+            justify-content: center;
+        } */
+          @media (max-width: 650px) {
+            body {
+                padding: 20px 0;
+            }
+
+            .card {
+                height: 65%;
+                max-width: 400px;
+                padding: 10px;
+            }
+
+            .box1 {
+                width: 100%;
+                min-height: 220px;
+            }
+
+            .operator {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 100px;
+            }
+
+            .content {
+                position: relative;
+                left: auto;
+                top: auto;
+                width: 100%;
+                margin-top: 15px;
+            }
+        }
+
+
+    
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="box1">
+            <h2>
+                COMBINE
+            </h2><br>
+            <h4>
+                TWO USER INPUT
+            </h4>
+            <div class="operator">
+                <h2 style="text-align: center;">OPERATORS</h2>
+            </div>
+        </div>
+        <div class="content">
+        <h2>INPUT HERE</h2>
+        <form action="script.js" method="post">
+            <input type="number" name="firstnumber" id="firstnumber" placeholder="First input" required>
+            <input type ="number" name = "secondnumber" id ="secondnumber" placeholder="Second input" required>
+            <div class="btn">
+                <button id="submit-btn">SUBMIT -></button>
+            </div> <br>
+            <div class="output">
+                <h4 id="result">OUTPUT</h4>
+            </div>
+
+
+        </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
